@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Archive API</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+</head>
+
+<body class="bg-gray">
+    <div class="input-group mb-3 w-50 mx-auto m-5">
+        <input id="search" type="text" class="form-control" placeholder="Seach Book" aria-label="Book"
+            aria-describedby="button-addon2">
+        <button onclick="searchBook()" class="btn btn-outline-secondary" type="button"
+            id="button-addon2">Search</button>
+    </div>
+
+    <div class="d-flex justify-content-center">
+        <div id="spinner" class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+        </div>
+    </div>
+
+    <div>
+        <p id="error" class="text-danger text-center">No Result Found</p>
+    </div>
+
+    <!-- card -->
+    <div id="card" class="row row-cols-1 row-cols-md-3 g-4 w-100">
+
+    </div>
+
+    <div id="result">
+
+    </div>
+
+    <!-- Javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+    </script>
+
+    <!-- Custom -->
+    <script src="JS/app.js"></script>
+</body>
+
+</html>
