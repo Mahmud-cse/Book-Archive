@@ -34,6 +34,11 @@ const searchBook=()=>{
 }
 
 const displayData=(value)=>{
+    console.log(value);
+    if(value.length===0){
+        toggleSpinner('none');
+        document.getElementById('error').style.display='block';
+    }else{
     const card=document.getElementById('card');
     card.textContent='';
     let count=0;
@@ -60,4 +65,6 @@ const displayData=(value)=>{
     toggleSpinner('none');
     toggleSearch('flex');
     toggleResult('block');
+    }
+
 }
