@@ -2,6 +2,7 @@ document.getElementById('error').style.display='none';
 document.getElementById('spinner').style.display='none';
 document.getElementById('result').style.display='none';
 
+// toggle
 const toggleSpinner=value=>{
     document.getElementById('spinner').style.display=value;
 }
@@ -12,12 +13,14 @@ const toggleResult=value=>{
     document.getElementById('result').style.display=value;
 }
 
+// search
 const searchBook=()=>{
     const search=document.getElementById('search');
     const searchText=search.value;
     search.value='';
     document.getElementById('error').style.display='none';
 
+// condition
     if(searchText===''){
         document.getElementById('error').style.display='block';
         document.getElementById('card').style.display='none';
@@ -33,8 +36,8 @@ const searchBook=()=>{
     }
 }
 
+// display
 const displayData=(value)=>{
-    console.log(value);
     if(value.length===0){
         toggleSpinner('none');
         document.getElementById('error').style.display='block';
@@ -42,6 +45,8 @@ const displayData=(value)=>{
     const card=document.getElementById('card');
     card.textContent='';
     let count=0;
+
+// forEach
     value?.forEach(data=>{
         const div=document.createElement('div');
         div.classList.add('col');
@@ -66,5 +71,4 @@ const displayData=(value)=>{
     toggleSearch('flex');
     toggleResult('block');
     }
-
 }
